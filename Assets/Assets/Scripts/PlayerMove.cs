@@ -7,9 +7,7 @@ public class PlayerMove : MonoBehaviour {
     Rigidbody2D rigid;
     Vector3 movement;
 
-    public float maxMoveSpeed = 5f;
-    public float horMoveSpeed = 0f;
-    public float verMoveSpeed = 0f;
+    public float moveSpeed = 5.0f;
     // Use this for initialization
     void Start () {
         rigid = GetComponent<Rigidbody2D>();
@@ -25,11 +23,7 @@ public class PlayerMove : MonoBehaviour {
         float hor = Input.GetAxisRaw("Horizontal");
         float ver = Input.GetAxisRaw("Vertical");
         movement = new Vector3(hor, ver, 0);
-        transform.position = Vector3.Lerp(transform.position, movement , Time.deltaTime * maxMoveSpeed);
-
-
-
-        //movement = movement.normalized * moveSpeed * Time.deltaTime;
-        //transform.Translate(movement);
+        movement = movement.normalized * moveSpeed * Time.deltaTime;
+        transform.Translate(movement);
     }
 }
