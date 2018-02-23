@@ -175,6 +175,8 @@
 -define:UNITY_EDITOR_WIN
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
+Assets/Assets/Scripts/Map.cs
+Assets/Assets/Scripts/MiniMap.cs
 Assets/Assets/Scripts/MiniMapManager.cs
 Assets/Assets/Scripts/PlayerMove.cs
 Assets/Assets/Scripts/VirtualJoystick.cs
